@@ -5,6 +5,17 @@ set -e
 
 echo "🌌 Starting the Complete ArchyBspwm Installation..."
 
+## 0. LightDM Installation and Setup
+echo "🖥️ Installing and configuring LightDM..."
+sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter
+
+# Enable the LightDM service to start on boot
+sudo systemctl enable lightdm
+
+# Configure the background image in the greeter config
+# This targets line 60 specifically as requested
+sudo sed -i '60s|.*|background = /usr/1.jpg|' /etc/lightdm/lightdm-gtk-greeter.conf
+
 ## 1. core Packages
 sudo pacman -S --needed --noconfirm \
 git nano curl wget less rust net-tools htop
@@ -47,12 +58,12 @@ cd uwu
 
 echo "⚙️ Deploying configurations..."
 cp -r config/* ~/.config/
-cp #.Xresources ~/
-cp #.bashrc ~/
+# Copying files with # in the name and renaming them to standard dotfiles
+cp "#.Xresources" "$HOME/.Xresources"
+cp "#.bashrc" "$HOME/.bashrc"
 
 ## 5. Permissions (Step 4)
 echo "🔐 Setting execution permissions..."
-chmod +x ~/.config/rofi/wifi.sh
 chmod +x ~/.config/bspwm/bspwmrc
 chmod +x ~/.config/sxhkd/sxhkdrc
 chmod +x ~/.config/bspwm/Archy.sh
@@ -75,9 +86,5 @@ echo "🔄 Updating Grub..."
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 echo "✅ ALL DONE! Please REBOOT your system."
-
-#wallpaper to lightdm
-#sudo sed -i '60s|.*|greet =background = /usr/1.jpg|'/etc/lightdm/lightdm-gtk-greeter.conf
-
 
 
