@@ -51,7 +51,7 @@ yay -S --noconfirm wlogout nm-applet xwinwrap-git otf-ipafont \
     whitesur-icon-theme-git ttf-iosevka-custom ttf-iosevka-nerd ttf-unifont
 
 ## 4. Repository Setup
-if [ ! -d "uwu" ]; then
+if [ ! -d "nya" ]; then
     git clone https://github.com/x11kitty/nya.git
 fi
 cd nya
