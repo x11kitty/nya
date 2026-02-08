@@ -17,7 +17,7 @@
 
 ---
 
-<table width="100%"> <tr> <td width="50%"> <h4>🚀 High Performance</h4> <p>Low-latency window switching and GPU-accelerated terminal rendering via Kitty.</p> </td> <td width="50%"> <h4>🎨 Polished UI</h4> <p>Soft shadows, rounded corners, and Gaussian blur enabled via Picom.</p> </td> </tr> <tr> <td width="50%"> <h4>⌨️ Efficient Workflow</h4> <p>Ergonomic keybindings managed by <code>sxhkd</code> for a mouse-less experience.</p> </td> <td width="50%"> <h4>📂 Minimalist Logic</h4> <p>Strict adherence to XDG Base Directory specs for a clean <code>$HOME</code>.</p> </td> </tr> </table>
+<table width="100%"> <tr> <td width="50%"> <h4>🚀 High Performance</h4> <p>Low-latency window switching and GPU-accelerated terminal rendering via Xterm and Kitty.</p> </td> <td width="50%"> <h4>🎨 Polished UI</h4> <p>Soft shadows, rounded corners, and Gaussian blur enabled via Picom.</p> </td> </tr> <tr> <td width="50%"> <h4>⌨️ Efficient Workflow</h4> <p>Ergonomic keybindings managed by <code>sxhkd</code> for a mouse-less experience.</p> </td> <td width="50%"> <h4>📂 Minimalist Logic</h4> <p>Strict adherence to XDG Base Directory specs for a clean <code>$HOME</code>.</p> </td> </tr> </table>
 
 ## 🛠️ Info :-
 * **Distro:** [Arch Linux](https://archlinux.org/) 
