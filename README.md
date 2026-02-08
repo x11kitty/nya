@@ -47,4 +47,6 @@ git clone https://github.com/x11kitty/uwu.git
 | `Super + D` | App Launcher (Dmenu) |
 
 ---
-
+<div align="center">
+  <img src="https://moe-counter.glitch.me/get/@your-github-username?theme=rule34" alt="Moe Counter" />
+</div>
