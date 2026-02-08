@@ -1,0 +1,198 @@
+# ======================
+# TERMINAL & APPS
+# ======================
+super + t
+    xterm
+
+super + k
+    konsole
+
+super + d
+    dmenu_run -nb '#000000' -nf '#26deff' -sb '#3d3d3d' -sf '#91ff85'
+
+super + r
+    rofi -show drun
+
+super + e
+    dolphin
+
+super + z
+    feh --bg-fill --randomize ~/.config/wallpaper/*
+
+super + w
+    bash .config/bspwm/walls.sh
+
+super + n
+    bash .config/bspwm/power.sh
+
+# ========================
+# WINDOW MANAGEMENT
+# ========================
+
+# Toggle Float and Center
+super + space
+    bspc node -t ~floating && bspc node -z center
+
+# Fullscreen
+super + f
+    bspc node -t fullscreen
+
+# Switch to previous window (reverse window focus)
+super + shift + Tab
+    bspc node -f prev.local.!hidden.window
+
+# Close window
+super + q
+    bspc node -c
+
+# Kill window
+super + shift + q
+    bspc node -k
+
+# Toggle layout (tiled/monocle)
+super + l
+    bspc desktop -l next
+
+# Toggle Pseudo-tiled
+super + p
+    bspc node -t ~pseudo_tiled
+
+# Toggle Sticky
+super + s
+    bspc node -g sticky
+# ========================
+# FLOATING WINDOW MOVEMENT
+# ========================
+
+# Move Floating Windows (20px) - Arrow keys
+super + shift + Left
+    if [ $(bspc query -N -n focused.floating) ]; then bspc node -v -20 0; fi
+super + shift + Down
+    if [ $(bspc query -N -n focused.floating) ]; then bspc node -v 0 20; fi
+super + shift + Up
+    if [ $(bspc query -N -n focused.floating) ]; then bspc node -v 0 -20; fi
+super + shift + Right
+    if [ $(bspc query -N -n focused.floating) ]; then bspc node -v 20 0; fi
+
+# Precise Movement (5px) - Arrow keys
+super + ctrl + shift + Left
+    if [ $(bspc query -N -n focused.floating) ]; then bspc node -v -5 0; fi
+super + ctrl + shift + Down
+    if [ $(bspc query -N -n focused.floating) ]; then bspc node -v 0 5; fi
+super + ctrl + shift + Up
+    if [ $(bspc query -N -n focused.floating) ]; then bspc node -v 0 -5; fi
+super + ctrl + shift + Right
+    if [ $(bspc query -N -n focused.floating) ]; then bspc node -v 5 0; fi
+
+# Snap to Edges - Arrow keys
+super + ctrl + Left
+    if [ $(bspc query -N -n focused.floating) ]; then bspc node -v -1000 0; fi
+super + ctrl + Down
+    if [ $(bspc query -N -n focused.floating) ]; then bspc node -v 0 1000; fi
+super + ctrl + Up
+    if [ $(bspc query -N -n focused.floating) ]; then bspc node -v 0 -1000; fi
+super + ctrl + Right
+    if [ $(bspc query -N -n focused.floating) ]; then bspc node -v 1000 0; fi
+
+# ========================
+# WORKSPACE CONTROLS
+# ========================
+
+# Switch Workspaces by INDEX (1st, 2nd, 3rd...)
+super + {1-9}
+    bspc desktop -f ^{1-9}
+
+# Move Windows to Workspaces by INDEX
+super + shift + {1-9}
+    bspc node -d ^{1-9}
+
+# ======================
+# WM CONTROL
+# ======================
+
+# Reload sxhkd
+super + Escape
+    pkill -USR1 -x sxhkd
+
+# Restart/reload bspwm
+super + alt + r
+    bspc wm -r
+
+# ======================
+# UTILITY KEYS
+# ======================
+
+# Screenshot
+Print
+    scrot ~/Pictures/%Y-%m-%d-%H-%M-%S.png
+
+# Volume controls
+F1
+    pamixer --toggle-mute
+F2
+    pamixer --decrease 5
+F3
+    pamixer --increase 5
+
+# Brightness controls
+F11
+    brightnessctl set 5%-
+F12
+    brightnessctl set +5%
+
+# Mute Microphone
+F4
+    pamixer --default-source --mute
+
+# Unmute Microphone
+F5
+    pamixer --default-source --unmute
+
+#Sleep Mode Button
+F6
+    systemctl suspend
+
+# Focus Previous Workspace
+F7
+    bspc desktop -f prev.local
+
+# Focus Next Workspace
+F8
+    bspc desktop -f next.local
+
+# Focus Last Used Workspace (Quick Toggle)
+F9
+    bspc desktop -f last
+
+# Keyboard Brightness Loop (0% -> 50% -> 100% -> 0%)
+F10
+    MAX=$(brightnessctl --device='*kbd_backlight' max); \
+    HALF=$((MAX / 2)); \
+    CUR=$(brightnessctl --device='*kbd_backlight' get); \
+    if [ "$CUR" -eq 0 ]; then brightnessctl --device='*kbd_backlight' set $HALF; \
+    elif [ "$CUR" -le "$HALF" ]; then brightnessctl --device='*kbd_backlight' set $MAX; \
+    else brightnessctl --device='*kbd_backlight' set 0; fi
+
+# ======================
+# NODE STATES (flags)
+# ======================
+
+super + ctrl + m
+    bspc node -g marked
+
+super + ctrl + x
+    bspc node -g locked
+
+super + ctrl + y
+    bspc node -g sticky
+
+super + ctrl + z
+    bspc node -g private
+
+# Swap with biggest window
+super + g
+    bspc node -s biggest.window
+
+# Send marked node to preselected
+super + y
+    bspc node newest.marked.local -n newest.!automatic.local

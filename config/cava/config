@@ -1,0 +1,17 @@
+[color]
+# True Black for maximum contrast
+background = '#000000'
+
+# Gradient enabled with 8 steps for smooth movement
+gradient = 1
+gradient_count = 8
+
+# "Oceanic Blue" Palette (Bottom to Top)
+gradient_color_1 = '#000080'  # Navy Blue (Bottom)
+gradient_color_2 = '#0000FF'  # Pure Blue
+gradient_color_3 = '#007FFF'  # Azure
+gradient_color_4 = '#00BFFF'  # Deep Sky Blue
+gradient_color_5 = '#1E90FF'  # Dodger Blue
+gradient_color_6 = '#87CEEB'  # Sky Blue
+gradient_color_7 = '#ADD8E6'  # Light Blue
+gradient_color_8 = '#E0FFFF'  # Light Cyan/White-Blue (Top)
