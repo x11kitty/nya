@@ -1,4 +1,4 @@
-# uwu 🎀
+# nya 🎀
 ![Banner Alt Text](images/2.png)
 
 <p align="center">
