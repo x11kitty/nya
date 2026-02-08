@@ -46,7 +46,12 @@ git clone https://github.com/x11kitty/uwu.git
 | `Super + R` | App Launcher (Rofi) |
 | `Super + D` | App Launcher (Dmenu) |
 
+---
+
+<p align="center">
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJndXIzZ3F4Z3Z4Z3Z4Z3Z4Z3Z4Z3Z4Z3Z4Z3Z4Z3Z4Z3Z4JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/3o7TKMGpxx6QG3X78I/giphy.gif" width="100%" height="5px" />
+</p>
+
 <div align="center">
-  <img src="https://waifu.now.sh/sfw/waifu" width="300" alt="Anime Character" />
-  <p><i>Stay comfy and keep coding.</i></p>
+  <sub>Generated with 💖 and Arch Linux</sub>
 </div>
