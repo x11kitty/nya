@@ -1,17 +1,16 @@
 [color]
-# True Black for maximum contrast
+# True Black background
 background = '#000000'
 
-# Gradient enabled with 8 steps for smooth movement
 gradient = 1
 gradient_count = 8
 
-# "Oceanic Blue" Palette (Bottom to Top)
-gradient_color_1 = '#000080'  # Navy Blue (Bottom)
-gradient_color_2 = '#0000FF'  # Pure Blue
-gradient_color_3 = '#007FFF'  # Azure
-gradient_color_4 = '#00BFFF'  # Deep Sky Blue
-gradient_color_5 = '#1E90FF'  # Dodger Blue
-gradient_color_6 = '#87CEEB'  # Sky Blue
-gradient_color_7 = '#ADD8E6'  # Light Blue
-gradient_color_8 = '#E0FFFF'  # Light Cyan/White-Blue (Top)
+# Manually "alpha-blended" colors (50% mix with black)
+gradient_color_1 = '#002620'  # Blended Deep Teal
+gradient_color_2 = '#00342E'  # Blended Slate Green
+gradient_color_3 = '#173E19'  # Blended Forest Green
+gradient_color_4 = '#215023'  # Blended Green
+gradient_color_5 = '#005660'  # Blended Dark Cyan
+gradient_color_6 = '#13636D'  # Blended Turquoise
+gradient_color_7 = '#40713F'  # Blended Light Mint
+gradient_color_8 = '#597D5A'  # Blended Seafoam
