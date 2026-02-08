@@ -18,7 +18,13 @@
 ---
 
 ## 🛠️ Info :-
-<p align="left"> <img src="https://www.google.com/search?q=https://img.shields.io/badge/OS-Arch%2520Linux-blue%3Fstyle%3Dflat-square%26logo%3Darch-linux%26logoColor%3Dwhite" alt="Arch Linux"> <img src="https://www.google.com/search?q=https://img.shields.io/badge/WM-bspwm-black%3Fstyle%3Dflat-square%26logo%3Dlinux%26logoColor%3Dwhite" alt="bspwm"> <img src="https://www.google.com/search?q=https://img.shields.io/badge/Shell-Bash-4EAA25%3Fstyle%3Dflat-square%26logo%3Dgnu-bash%26logoColor%3Dwhite" alt="Bash"> <img src="https://www.google.com/search?q=https://img.shields.io/badge/Terminal-Kitty-white%3Fstyle%3Dflat-square%26logo%3Dkitty%26logoColor%3D000000" alt="Kitty"> </p>
+
+* **Distro:** [Arch Linux](https://archlinux.org/) 
+* **WM:** [bspwm](https://github.com/baskerville/bspwm) (Binary Space Partitioning WM)
+* **Hotkeys:** [sxhkd](https://github.com/baskerville/sxhkd)
+* **Compositor:** Picom
+* **Shell:** Bash 
+* **Terminal:** Kitty / Xterm
 
 ## 🚀 Installation
 
