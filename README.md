@@ -8,6 +8,14 @@
   </p>
 </p>
 
+<details>
+  <summary>📸 View Full Gallery</summary>
+  <br>
+  <img src="images/rev.png".png" alt="App Launcher">
+  <img src="images/rof.png" alt="System Usage">
+  <img src="images/all.png" alt="Code Editor">
+</details>
+
 <p align="center">
   <img src="https://img.shields.io/badge/OS-Arch%20Linux-blue?style=for-the-badge&logo=arch-linux&logoColor=white" alt="Arch Linux">
   <img src="https://img.shields.io/badge/WM-bspwm-black?style=for-the-badge&logo=linux&logoColor=white" alt="bspwm">
