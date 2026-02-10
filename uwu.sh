@@ -14,8 +14,39 @@ sudo systemctl enable lightdm
 
 # Configure the background image in the greeter config
 # This targets line 60 specifically as requested
-sudo sed -i '60s|.*|background = /usr/1.jpg|' /etc/lightdm/lightdm-gtk-greeter.conf
-sudo sed -i '62s|.*|theme-name = Materia-dark|' /etc/lightdm/lightdm-gtk-greeter.conf
+sudo tee /etc/lightdm/lightdm-gtk-greeter.conf > /dev/null <<EOF
+# LightDM GTK+ Greeter Configuration
+# Professional Minimalist Setup
+
+[greeter]
+# Appearance
+background = /usr/1.jpg
+theme-name = Materia-dark
+icon-theme-name = Adwaita
+cursor-theme-name = Adwaita
+user-background = false
+
+# Fonts & Rendering
+font-name = Sans 11
+xft-antialias = true
+xft-dpi = 96
+xft-hintstyle = hintslight
+xft-rgba = rgb
+
+# Login Window Layout
+position = 50%,center 50%,center
+hide-user-image = false
+round-user-image = true
+
+# Panel Configuration
+panel-position = top
+indicators = ~host;~spacer;~clock;~spacer;~layout;~session;~power
+clock-format = %A, %B %d  %H:%M
+
+# Security
+screensaver-timeout = 60
+EOF
+
 ## 1. core Packages
 sudo pacman -S --needed --noconfirm \
 git nano curl wget less rust net-tools htop
