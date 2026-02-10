@@ -15,7 +15,7 @@ sudo systemctl enable lightdm
 # Configure the background image in the greeter config
 # This targets line 60 specifically as requested
 sudo sed -i '60s|.*|background = /usr/1.jpg|' /etc/lightdm/lightdm-gtk-greeter.conf
-
+sudo sed -i '62s|.*|theme-name = Materia-dark|' /etc/lightdm/lightdm-gtk-greeter.conf
 ## 1. core Packages
 sudo pacman -S --needed --noconfirm \
 git nano curl wget less rust net-tools htop
