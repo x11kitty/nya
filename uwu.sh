@@ -25,6 +25,7 @@ theme-name = Materia-dark
 icon-theme-name = Adwaita
 cursor-theme-name = Adwaita
 user-background = false
+default-user-image = /usr/1.png
 
 # Fonts & Rendering
 font-name = Sans 11
