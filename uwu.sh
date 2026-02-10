@@ -92,6 +92,7 @@ echo "⚙️ Deploying configurations..."
 cp -r config/* ~/.config/
 # Copying files with # in the name and renaming them to standard dotfiles
 cp "#.Xresources" "$HOME/.Xresources"
+# Copying files with # in the name and renaming them to standard dotfiles
 cp "#.bashrc" "$HOME/.bashrc"
 
 ## 5. Permissions (Step 4)
