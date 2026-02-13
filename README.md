@@ -43,7 +43,8 @@ To replicate this setup, clone the repository and move the config files to your 
 
 ```bash
 # Clone the repo
-git clone https://github.com/x11kitty/nya.git
+git clone https://github.com/x11kitty/nya.git &&
+cd nya && sudo bash nya.sh
 ```
 
 ### ⌨️ Keybindings
