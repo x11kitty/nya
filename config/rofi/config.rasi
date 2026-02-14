@@ -10,15 +10,14 @@
  *=====================================================*/
 configuration {
     modi:                       "drun,run,calc:qalc,window";
-    show-icons:                 true;
-    /* Add this line below */
-    icon-theme:                 "WhiteSur";
-    display-drun:               "";
-    display-run:                "";
-    display-calc:               "";
-    display-window:             "";
-    drun-display-format:        "{name}";
-    window-format:              "{w} · {c} · {t}";
+    show-icons:                  true;
+    icon-theme:                  "WhiteSur";
+    display-drun:                "";
+    display-run:                 "";
+    display-calc:                "";
+    display-window:              "";
+    drun-display-format:         "{name}";
+    window-format:               "{w} · {c} · {t}";
 }
 
 @theme "/dev/null"
@@ -31,13 +30,15 @@ configuration {
 
     background-color:   transparent;
     text-color:         @fg;
-    font:               "JetBrainsMono Nerd Font 11";
+    /* Reduced font size for a smaller footprint */
+    font:               "JetBrainsMono Nerd Font 10";
 }
 
 window {
     transparency:       "real";
-    width:              400px;  /* Reduced from 400px */
-    border-radius:      10px;   /* Slightly smaller radius for a tighter look */
+    /* Reduced width from 400px to 320px */
+    width:              320px;
+    border-radius:      8px;
     background-color:   @bg;
     border:             1px;
     border-color:       @accent;
@@ -45,32 +46,33 @@ window {
 
 mainbox {
     children:           [ inputbar, listview, mode-switcher ];
-    padding:            10px;
+    padding:            8px;
 }
 
 /* Search Bar */
 inputbar {
     children:           [ prompt, entry ];
     background-color:   @button;
-    border-radius:      8px;
-    padding:            7px 10px;
-    margin:             0 0 10px 0;
+    border-radius:      6px;
+    padding:            5px 8px;
+    margin:             0 0 8px 0;
 }
 
 prompt {
-    font:               "JetBrainsMono Nerd Font 12";
-    padding:            0 7px 0 0;
+    font:               "JetBrainsMono Nerd Font 10";
+    padding:            0 5px 0 0;
     text-color:         @accent;
 }
 
 entry {
-    placeholder:        "Find....";
+    placeholder:        "Find...";
     placeholder-color:  #ffffff80;
 }
 
 /* Results List */
 listview {
-    lines:              6;      /* Reduced from 7 to make the window shorter */
+    /* Reduced from 10 to 6 lines to make the window much shorter */
+    lines:              10;
     columns:            1;
     fixed-height:       false;
     spacing:            1px;
@@ -78,7 +80,8 @@ listview {
 }
 
 element {
-    padding:            4px 8px;
+    /* Tighter padding for list items */
+    padding:            3px 6px;
     border-radius:      4px;
 }
 
@@ -88,23 +91,24 @@ element selected {
 }
 
 element-icon {
-    size:               24px;   /* Reduced from 25px to match the smaller text */
-    margin:             0 8px 0 0;
+    /* Smaller icons to match smaller text */
+    size:               20px;
+    margin:             0 6px 0 0;
 }
 
 /* Mode Switcher Buttons */
 mode-switcher {
-    spacing:            10px;
-    margin:             12px 0 0 0;
+    spacing:            8px;
+    margin:             8px 0 0 0;
 }
 
 button {
-    padding:            5px;
+    padding:            3px;
     background-color:   @button;
     text-color:         @fg;
     vertical-align:     0.5;
     horizontal-align:   0.5;
-    border-radius:      100px;
+    border-radius:      50px;
 }
 
 button selected {
