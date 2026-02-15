@@ -1,0 +1,150 @@
+/*=====================================================
+ * ARCH RICE - Split-Pane Edition
+ *=====================================================*/
+
+configuration {
+    modi:                       "drun,run,window";
+    show-icons:                 true;
+    icon-theme:                 "WhiteSur";
+    /* Swapped search icon for Arch Logo */
+    display-drun:               "";
+    display-run:                "";
+    display-window:             "";
+    drun-display-format:        "{name}";
+    window-format:              "{w} · {c} · {t}";
+}
+
+@theme "/dev/null"
+
+* {
+    /* Colors */
+    bg:                         #00000080;
+    bg-alt:                     #1a1a1a;
+    fg:                         #ffffff;
+    accent:                     #1793d1; /* Official Arch Blue */
+    border-col:                 #ffffff10;
+
+    background-color:           transparent;
+    text-color:                 @fg;
+    font:                       "JetBrainsMono Nerd Font 10";
+}
+
+window {
+    width:                      750px;
+    height:                     450px;
+    border:                     1px;
+    border-color:               @border-col;
+    border-radius:              12px;
+    background-color:           @bg;
+
+    location:                   center;
+    anchor:                     center;
+}
+
+mainbox {
+    orientation:                horizontal;
+    children:                   [ "content-box", "image-side" ];
+}
+
+/* LEFT SIDE: The Wallpaper Panel */
+image-side {
+    /* REPLACE THIS PATH WITH YOUR WALLPAPER PATH */
+    background-image:           url("~/.config/rofi/current_wallpaper.jpg");
+    background-position:        center;
+    width:                      29%;
+    border-radius:              11px 0px 0px 11px;
+    background-color:           #00000020; /* Subtle tint */
+
+    /* Adds a centered Arch Logo on the image itself */
+    children:                   [ "arch-logo-overlay" ];
+}
+
+arch-logo-overlay {
+    expand:                     true;
+    background-color:           transparent;
+    /* Optional: Small logo overlay on the image side */
+    /* content:                  ""; */
+}
+
+/* RIGHT SIDE: The Interface */
+content-box {
+    orientation:                vertical;
+    children:                   [ "inputbar", "listview", "mode-switcher" ];
+    padding:                    25px;
+}
+
+/* Search Bar */
+inputbar {
+    enabled:                    true;
+    spacing:                    15px;
+    padding:                    12px;
+    background-color:           @bg-alt;
+    border-radius:              10px;
+    children:                   [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled:                    true;
+    text-color:                 @accent;
+    font:                       "JetBrainsMono Nerd Font 14";
+    padding:                    0px 10px 0px 5px; /* ADDED: 10px padding on the right */
+    vertical-align:             0.5;
+}
+
+entry {
+    placeholder:                "I use Arch, btw...";
+    placeholder-color:          #ffffff20;
+    vertical-align:             0.5;
+}
+
+/* Results */
+listview {
+    columns:                    1;
+    lines:                      7;
+    cycle:                      true;
+    dynamic:                    true;
+    scrollbar:                  false;
+    layout:                     vertical;
+    spacing:                    8px;
+    margin:                     15px 0px;
+}
+
+element {
+    padding:                    10px;
+    border-radius:              8px;
+    cursor:                     pointer;
+    orientation:                horizontal;
+    spacing:                    12px;
+}
+
+element selected {
+    background-color:           @accent;
+    text-color:                 @bg;
+}
+
+element-icon {
+    size:                       29px;
+}
+
+element-text {
+    vertical-align:             0.5;
+    text-color:                 inherit;
+}
+
+/* Bottom Tabs */
+mode-switcher {
+    spacing:                    15px;
+}
+
+button {
+    padding:                    10px;
+    background-color:           @bg-alt;
+    border-radius:              20px;
+    cursor:                     pointer;
+    text-color:                 @fg;
+}
+
+button selected {
+    background-color:           @accent;
+    text-color:                 @bg;
+}
