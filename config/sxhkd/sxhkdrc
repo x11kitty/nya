@@ -1,13 +1,3 @@
-#=====================================================
-#
-#   ███████╗██╗  ██╗██╗  ██╗██╗  ██╗██████╗ ██████╗  ██████╗
-#   ██╔════╝╚██╗██╔╝██║  ██║██║ ██╔╝██╔══██╗██╔══██╗██╔════╝
-#   ███████╗ ╚███╔╝ ███████║█████╔╝ ██║  ██║██████╔╝██║     
-#   ╚════██║ ██╔██╗ ██╔══██║██╔═██╗ ██║  ██║██╔══██╗██║     
-#   ███████║██╔╝ ██╗██║  ██║██║  ██╗██████╔╝██║  ██║╚██████╗
-#   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝  ╚═╝ ╚═════╝
-#
-#=====================================================
 # ======================
 # TERMINAL & APPS
 # ======================
@@ -115,6 +105,42 @@ super + {1-9}
 # Move Windows to Workspaces by INDEX
 super + shift + {1-9}
     bspc node -d ^{1-9}
+
+# ========================
+# FLOATING WINDOW MOVEMENT
+# ========================
+
+# Move Floating Windows (20px) - Arrow keys (Replaces bspc move [cite: 10, 11, 12, 13])
+super + shift + {Left,Down,Up,Right}
+    i3-msg move {left,down,up,right} 20px
+
+# Precise Movement (5px) - Arrow keys (Replaces bspc move [cite: 14, 15, 16, 17])
+super + ctrl + shift + {Left,Down,Up,Right}
+    i3-msg move {left,down,up,right} 5px
+
+# Snap to Edges (Replaces bspc snap [cite: 18, 19, 20, 21])
+super + ctrl + {Left,Down,Up,Right}
+    i3-msg move {left,down,up,right} 1000px
+
+# ========================
+# WORKSPACE CONTROLS
+# ========================
+
+# Switch Workspaces by INDEX (Replaces bspc desktop -f [cite: 8])
+super + {1-9,0}
+    i3-msg workspace number {1-9,10}
+
+# Move Windows to Workspaces by INDEX (Replaces bspc node -d [cite: 8])
+super + shift + {1-9,0}
+    i3-msg move container to workspace number {1-9,10}
+
+# Workspace Navigation (Replaces F7/F8/F9 [cite: 8])
+F7
+    i3-msg workspace prev
+F8
+    i3-msg workspace next
+F9
+    i3-msg workspace back_and_forth
 
 # ======================
 # WM CONTROL
