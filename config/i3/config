@@ -19,8 +19,8 @@ exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper/1.jpg
 
 # --- Styling ---
 default_border pixel 1
-gaps inner 10
-gaps outer 5
+gaps inner 1
+gaps outer 1
 smart_borders on
 
 # Colors matching bspwm black theme [cite: 2]
