@@ -1,0 +1,95 @@
+# --- i3 Config Remade from bspwm/sxhkd ---
+
+# Set modifier (Super key)
+set $mod Mod4
+floating_modifier $mod
+
+# Font from bspwmrc [cite: 1]
+font pango:FiraCode Nerd Font Mono 7
+
+# --- Autostart Section ---
+# Start sxhkd for app launchers and utility keys [cite: 1]
+exec_always --no-startup-id sxhkd
+# Start Polybar [cite: 1]
+exec_always --no-startup-id polybar &
+# Monitor & Gamma adjustments from bspwmrc [cite: 2, 3, 4]
+exec --no-startup-id xrandr --output $(xrandr | grep " connected" | cut -f1 -d " ") --brightness 1 --gamma 0.7:0.7:0.7
+# Wallpaper
+exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper/1.jpg
+
+# --- Styling ---
+default_border pixel 1
+gaps inner 10
+gaps outer 5
+smart_borders on
+
+# Colors matching bspwm black theme [cite: 2]
+client.focused #000000 #000000 #ffffff #000000 #000000
+client.unfocused #000000 #000000 #888888 #000000 #000000
+
+# --- Workspaces (Japanese names from bspwmrc) [cite: 1, 24] ---
+set $ws1 "かいはつ"
+set $ws2 "つうしん"
+set $ws3 "しすてむ"
+set $ws4 "ぶんしょ"
+set $ws5 "かそう"
+set $ws6 "だんわ"
+set $ws7 "おんがく"
+set $ws8 "えいぞう"
+set $ws9 "ずが"
+set $ws10 "るーと"
+
+# --- Window Rules ---
+# Match Konsole rule from bspwmrc [cite: 1, 2, 24]
+for_window [class="Konsole"] floating enable, resize set 600 270, move position center
+
+# --- Keybinds (Window Management) ---
+bindsym $mod+q kill
+bindsym $mod+f fullscreen toggle
+bindsym $mod+space floating toggle
+bindsym $mod+s sticky toggle
+
+# Workspace Switching [cite: 25]
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# Move Windows to Workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# Navigation (HJKL Focus)
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# Move containers (HJKL Move)
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# Tiling Layout Modes
+bindsym $mod+Mod1+s layout stacking
+bindsym $mod+Mod1+w layout tabbed
+bindsym $mod+Mod1+e layout toggle split
+
+# System Controls
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+x exit
