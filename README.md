@@ -23,7 +23,7 @@
   <img src="https://img.shields.io/badge/WM-bspwm-black?style=for-the-badge&logo=linux&logoColor=white" alt="bspwm">
   <img src="https://img.shields.io/badge/Display-X11-orange?style=for-the-badge&logo=xorg&logoColor=white" alt="X11">
   <img src="https://img.shields.io/badge/Hotkeys-sxhkd-red?style=for-the-badge&logo=gnokeys&logoColor=white" alt="sxhkd">
-  <img src="https://img.shields.io/badge/WM-bspwm-black?style=for-the-badge&logo=linux&logoColor=white" alt="i3">
+  <img src="https://img.shields.io/badge/WM-i3wm-black?style=for-the-badge&logo=linux&logoColor=white" alt="i3wm">
 </p>
 
 ---
@@ -32,7 +32,7 @@
 
 ## 🛠️ Info :-
 * **Distro:** [Arch Linux](https://archlinux.org/) 
-* **WM:** [bspwm](https://github.com/baskerville/bspwm) (Binary Space Partitioning WM)
+* **WM:** [bspwm]/[i3](https://github.com/baskerville/bspwm) (Binary Space Partitioning WM)/(Improved Tilling WM)
 * **Hotkeys:** [sxhkd](https://github.com/baskerville/sxhkd)
 * **Compositor:** Picom
 * **Shell:** Bash 
