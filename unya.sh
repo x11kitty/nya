@@ -23,7 +23,7 @@ sudo pacman -Rs --noconfirm \
     ttf-hack-nerd ttf-firacode-nerd papirus-icon-theme bc \
     power-profiles-daemon ttc-iosevka ttf-font-awesome \
     noto-fonts-cjk adobe-source-han-sans-jp-fonts tlp \
-    materia-gtk-theme breeze-gtk || true
+    materia-gtk-theme breeze-gtk i3 || true
 
 ## 3. Remove AUR Packages
 echo "🔡 Removing AUR packages..."
@@ -42,6 +42,7 @@ rm -rf ~/.config/polybar
 rm -rf ~/.config/picom
 rm -rf ~/.config/rofi
 rm -rf ~/.config/kitty
+rm -rf ~/.config/i3
 
 # Remove dotfiles moved to $HOME
 rm -f ~/.Xresources
