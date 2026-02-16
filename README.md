@@ -23,6 +23,7 @@
   <img src="https://img.shields.io/badge/WM-bspwm-black?style=for-the-badge&logo=linux&logoColor=white" alt="bspwm">
   <img src="https://img.shields.io/badge/Display-X11-orange?style=for-the-badge&logo=xorg&logoColor=white" alt="X11">
   <img src="https://img.shields.io/badge/Hotkeys-sxhkd-red?style=for-the-badge&logo=gnokeys&logoColor=white" alt="sxhkd">
+  <img src="https://img.shields.io/badge/WM-bspwm-black?style=for-the-badge&logo=linux&logoColor=white" alt="i3">
 </p>
 
 ---
