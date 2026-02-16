@@ -32,7 +32,8 @@
 
 ## 🛠️ Info :-
 * **Distro:** [Arch Linux](https://archlinux.org/) 
-* **WM:** [bspwm]/[i3](https://github.com/baskerville/bspwm) (Binary Space Partitioning WM)/(Improved Tilling WM)
+* **WM:** [bspwm](https://github.com/baskerville/bspwm) (Binary Space Partitioning WM)
+* **WM2:** [i3](https://github.com/i3)(Improved Tilling WM)
 * **Hotkeys:** [sxhkd](https://github.com/baskerville/sxhkd)
 * **Compositor:** Picom
 * **Shell:** Bash 
