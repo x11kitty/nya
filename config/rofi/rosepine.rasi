@@ -1,0 +1,144 @@
+/*=====================================================
+ *
+ * ██████╗  ██████╗ ███████╗██╗
+ * ██╔══██╗██╔═══██╗██╔════╝██║
+ * ██████╔╝██║   ██║█████╗  ██║
+ * ██╔══██╗██║   ██║██╔══╝  ██║
+ * ██║  ██║╚██████╔╝██║     ██║
+ * ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝
+ *
+ * Rosé Pine Moon Edition
+ *=====================================================*/
+
+configuration {
+    modi:                       "drun,run,calc:qalc,window";
+    show-icons:                 true;
+    icon-theme:                 "WhiteSur";
+    display-drun:               "";
+    display-run:                "";
+    display-calc:               "";
+    display-window:             "";
+    drun-display-format:        "{name}";
+    window-format:              "{w} · {c} · {t}";
+}
+
+@theme "/dev/null"
+
+* {
+    /* Rosé Pine Moon Colors */
+    rp-base:            #232136;
+    rp-surface:         #2a273f;
+    rp-overlay:         #393552;
+    rp-muted:           #6e6a86;
+    rp-subtle:          #908caa;
+    rp-text:            #e0def4;
+    rp-love:            #eb6f92;
+    rp-gold:            #f6c177;
+    rp-rose:            #ea9a97;
+    rp-pine:            #3e8fb0;
+    rp-foam:            #9ccfd8;
+    rp-iris:            #c4a7e7;
+    rp-highlight-low:   #2a283e;
+    rp-highlight-med:   #44415a;
+    rp-highlight-high:  #56526e;
+
+    /* Applied Colors */
+    bg:                  #232136e6; /* Base with transparency */
+    fg:                  @rp-text;
+    accent:              @rp-iris;
+    button:              @rp-surface;
+
+    background-color:    transparent;
+    text-color:          @fg;
+    font:                "JetBrainsMono Nerd Font 11";
+}
+
+window {
+    transparency:        "real";
+    width:               400px;
+    border-radius:       10px;
+    background-color:    @bg;
+    border:              1px;
+    border-color:        @rp-highlight-med;
+}
+
+mainbox {
+    children:            [ inputbar, listview, mode-switcher ];
+    padding:             12px;
+}
+
+/* Search Bar */
+inputbar {
+    children:            [ prompt, entry ];
+    background-color:    @button;
+    border-radius:       8px;
+    padding:             8px 12px;
+    margin:              0 0 10px 0;
+}
+
+prompt {
+    font:                "JetBrainsMono Nerd Font 12";
+    padding:             0 8px 0 0;
+    text-color:          @accent;
+}
+
+entry {
+    placeholder:         "Find....";
+    placeholder-color:   @rp-muted;
+}
+
+/* Results List */
+listview {
+    lines:               6;
+    columns:             1;
+    fixed-height:        false;
+    spacing:             4px;
+    scrollbar:           false;
+}
+
+element {
+    padding:             6px 10px;
+    border-radius:       6px;
+    cursor:              pointer;
+}
+
+element normal.normal {
+    background-color:    transparent;
+    text-color:          @fg;
+}
+
+element selected.normal {
+    background-color:    @rp-highlight-med;
+    text-color:          @rp-rose; /* Highlight text with Rose */
+}
+
+element-icon {
+    size:                24px;
+    margin:              0 10px 0 0;
+}
+
+element-text {
+    vertical-align:      0.5;
+    text-color:          inherit;
+}
+
+/* Mode Switcher Buttons */
+mode-switcher {
+    spacing:             10px;
+    margin:              10px 0 0 0;
+}
+
+button {
+    padding:             6px;
+    background-color:    @button;
+    text-color:          @rp-subtle;
+    vertical-align:      0.5;
+    horizontal-align:    0.5;
+    border-radius:       8px;
+    cursor:              pointer;
+}
+
+button selected {
+    background-color:    @accent;
+    text-color:          @rp-base;
+}

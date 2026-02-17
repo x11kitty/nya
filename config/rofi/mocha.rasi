@@ -1,0 +1,115 @@
+/*=====================================================
+ *
+ * ██████╗  ██████╗ ███████╗██╗
+ * ██╔══██╗██╔═══██╗██╔════╝██║
+ * ██████╔╝██║   ██║█████╗  ██║
+ * ██╔══██╗██║   ██║██╔══╝  ██║
+ * ██║  ██║╚██████╔╝██║     ██║
+ * ╚═╝  ╚═╝ ╚═════╝ ╚═╝     ╚═╝
+ *
+ *=====================================================*/
+configuration {
+    modi:                       "drun,run,calc:qalc,window";
+    show-icons:                 true;
+    icon-theme:                 "WhiteSur";
+    display-drun:               "";
+    display-run:                "";
+    display-calc:               "";
+    display-window:             "";
+    drun-display-format:        "{name}";
+    window-format:              "{w} · {c} · {t}";
+}
+
+@theme "/dev/null"
+
+* {
+    /* Catppuccin Mocha Palette */
+    bg:          #1e1e2eE6;  /* Base with 90% opacity */
+    fg:          #cdd6f4;    /* Text */
+    accent:      #89b4fa;    /* Blue */
+    button:      #313244;    /* Surface0 */
+    active:      #a6e3a1;    /* Green */
+    urgent:      #f38ba8;    /* Red */
+
+    background-color:   transparent;
+    text-color:         @fg;
+    font:               "JetBrainsMono Nerd Font 11";
+}
+
+window {
+    transparency:       "real";
+    width:              400px;
+    border-radius:      10px;
+    background-color:   @bg;
+    border:             2px;
+    border-color:       @accent;
+}
+
+mainbox {
+    children:           [ inputbar, listview, mode-switcher ];
+    padding:            10px;
+}
+
+/* Search Bar */
+inputbar {
+    children:           [ prompt, entry ];
+    background-color:   @button;
+    border-radius:      8px;
+    padding:            7px 10px;
+    margin:             0 0 10px 0;
+}
+
+prompt {
+    font:               "JetBrainsMono Nerd Font 12";
+    padding:            0 7px 0 0;
+    text-color:         @accent;
+}
+
+entry {
+    placeholder:        "Find....";
+    placeholder-color:  #6c7086; /* Overlay0 */
+}
+
+/* Results List */
+listview {
+    lines:              6;
+    columns:            1;
+    fixed-height:       false;
+    spacing:            1px;
+    scrollbar:          false;
+}
+
+element {
+    padding:            4px 8px;
+    border-radius:      4px;
+}
+
+element selected {
+    background-color:   @accent;
+    text-color:         #11111b; /* Crust (dark text for high contrast on blue) */
+}
+
+element-icon {
+    size:               24px;
+    margin:             0 8px 0 0;
+}
+
+/* Mode Switcher Buttons */
+mode-switcher {
+    spacing:            10px;
+    margin:             12px 0 0 0;
+}
+
+button {
+    padding:            5px;
+    background-color:   @button;
+    text-color:         @fg;
+    vertical-align:     0.5;
+    horizontal-align:   0.5;
+    border-radius:      10px;
+}
+
+button selected {
+    background-color:   @accent;
+    text-color:         #11111b;
+}
