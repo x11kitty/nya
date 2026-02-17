@@ -48,8 +48,6 @@ clock-format = %A, %B %d  %H:%M
 screensaver-timeout = 60
 EOF
 
-# Wallpaper for lightdm
-sudo cp 1.jpg /usr
 
 ## 1. core Packages
 sudo pacman -S --needed --noconfirm \
@@ -97,6 +95,9 @@ cp -r config/* ~/.config/
 cp "#.Xresources" "$HOME/.Xresources"
 # Copying files with # in the name and renaming them to standard dotfiles
 cp "#.bashrc" "$HOME/.bashrc"
+
+# Wallpaper for lightdm
+sudo cp 1.jpg /usr
 
 ## 5. Permissions (Step 4)
 echo "🔐 Setting execution permissions..."
