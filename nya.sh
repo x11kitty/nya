@@ -48,6 +48,9 @@ clock-format = %A, %B %d  %H:%M
 screensaver-timeout = 60
 EOF
 
+# Wallpaper for lightdm
+sudo cp 1.jpg /usr
+
 ## 1. core Packages
 sudo pacman -S --needed --noconfirm \
 git nano curl wget less rust net-tools htop
