@@ -15,11 +15,11 @@ exec_always --no-startup-id polybar &
 # Monitor & Gamma adjustments from bspwmrc [cite: 2, 3, 4]
 exec --no-startup-id xrandr --output $(xrandr | grep " connected" | cut -f1 -d " ") --brightness 1 --gamma 0.7:0.7:0.7
 # Wallpaper
-exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper/1.jpg
+exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper/floating-islands-waterfalls-magical-cloudscape-desktop-wallpaper-4k.jpg
 
 # --- Styling ---
 default_border pixel 1
-gaps inner 1
+gaps inner 2
 gaps outer 1
 smart_borders on
 
