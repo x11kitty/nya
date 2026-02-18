@@ -1,0 +1,140 @@
+/*=====================================================
+ *
+ * ██████╗  ██████╗  █████╗  ██████╗██╗   ██╗██╗      █████╗
+ * ██╔══██╗██╔═══██╗██╔══██╗██╔════╝██║   ██║██║     ██╔══██╗
+ * ██║  ██║██║   ██║███████║██║     ██║   ██║██║     ███████║
+ * ██║  ██║██║   ██║██╔══██║██║     ██║   ██║██║     ██╔══██║
+ * ██████╔╝╚██████╔╝██║  ██║╚██████╗╚██████╔╝███████╗██║  ██║
+ * ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚══════╝╚═╝  ╚═╝
+ *
+ * Dracula Edition
+ *=====================================================*/
+
+configuration {
+    modi:                       "drun,run,calc:qalc,window";
+    show-icons:                 true;
+    icon-theme:                 "WhiteSur";
+    display-drun:               "";
+    display-run:                "";
+    display-calc:               "";
+    display-window:             "";
+    drun-display-format:        "{name}";
+    window-format:              "{w} · {c} · {t}";
+}
+
+@theme "/dev/null"
+
+* {
+    /* Dracula Colors */
+    drac-bg:     #282a36;
+    drac-cur:    #44475a;
+    drac-fg:     #f8f8f2;
+    drac-cmt:    #6272a4;
+    drac-cya:    #8be9fd;
+    drac-grn:    #50fa7b;
+    drac-ora:    #ffb86c;
+    drac-pnk:    #ff79c6;
+    drac-pur:    #bd93f9;
+    drac-red:    #ff5555;
+    drac-yel:    #f1fa8c;
+
+    /* Applied Colors */
+    bg:                  #282a36e6; /* Base with transparency */
+    fg:                  @drac-fg;
+    accent:              @drac-pur;
+    button:              @drac-cur;
+
+    background-color:    transparent;
+    text-color:          @fg;
+    font:                "JetBrainsMono Nerd Font 11";
+}
+
+window {
+    transparency:        "real";
+    width:               400px;
+    border-radius:       10px;
+    background-color:    @bg;
+    border:              1px;
+    border-color:        @drac-pur;
+}
+
+mainbox {
+    children:            [ inputbar, listview, mode-switcher ];
+    padding:             12px;
+}
+
+/* Search Bar */
+inputbar {
+    children:            [ prompt, entry ];
+    background-color:    @button;
+    border-radius:       8px;
+    padding:             8px 12px;
+    margin:              0 0 10px 0;
+}
+
+prompt {
+    font:                "JetBrainsMono Nerd Font 12";
+    padding:             0 8px 0 0;
+    text-color:          @accent;
+}
+
+entry {
+    placeholder:         "Find....";
+    placeholder-color:   @drac-cmt;
+}
+
+/* Results List */
+listview {
+    lines:               6;
+    columns:             1;
+    fixed-height:        false;
+    spacing:             4px;
+    scrollbar:           false;
+}
+
+element {
+    padding:             6px 10px;
+    border-radius:       6px;
+    cursor:              pointer;
+}
+
+element normal.normal {
+    background-color:    transparent;
+    text-color:          @fg;
+}
+
+element selected.normal {
+    background-color:    @drac-cur;
+    text-color:          @drac-pnk; /* Highlight text with Pink */
+}
+
+element-icon {
+    size:                24px;
+    margin:              0 10px 0 0;
+}
+
+element-text {
+    vertical-align:      0.5;
+    text-color:          inherit;
+}
+
+/* Mode Switcher Buttons */
+mode-switcher {
+    spacing:             10px;
+    margin:              10px 0 0 0;
+}
+
+button {
+    padding:             6px;
+    background-color:    @button;
+    text-color:          @drac-cmt;
+    vertical-align:      0.5;
+    horizontal-align:    0.5;
+    border-radius:       8px;
+    cursor:              pointer;
+}
+
+button selected {
+    background-color:    @accent;
+    text-color:          @drac-bg;
+}
