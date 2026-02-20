@@ -73,9 +73,9 @@ sudo pacman -S --needed --noconfirm \
 ## 2. AUR Helper (Yay)
 if ! command -v yay &> /dev/null; then
     echo "📦 Installing yay..."
+    cd .. &&
     git clone https://aur.archlinux.org/yay.git &&
-    cp yay ~/ && cd &&
-    cd yay && makepkg -si --noconfirm && cd
+    cd yay && makepkg -si --noconfirm
 fi
 
 ## 3. AUR Packages & Fonts
@@ -91,7 +91,7 @@ fi
 cd nya
 
 echo "⚙️ Deploying configurations..."
-cp -r config/* ~/.config/
+sudo cp config/* ~/.config/
 # Copying files with # in the name and renaming them to standard dotfiles
 cp "#.Xresources" "$HOME/.Xresources"
 # Copying files with # in the name and renaming them to standard dotfiles
