@@ -111,6 +111,7 @@ sudo chmod +x ~/.config/bspwm/Archy.sh
 sudo chmod +x ~/.config/bspwm/Disp.sh
 sudo chmod +x ~/.config/bspwm/walls.sh
 sudo chmod +x ~/.config/bspwm/power.sh
+sudo chmod +x ~/.config/dolphinrc
 
 ## 6. Audio Setup (Pipewire)
 echo "🔊 Switching to Pipewire..."
