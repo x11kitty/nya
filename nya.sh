@@ -82,7 +82,7 @@ fi
 echo "🔡 Installing AUR packages and extra fonts..."
 yay -S --noconfirm wlogout nm-applet xwinwrap-git otf-ipafont \
     ttf-jetbrains-mono nerd-fonts-iosevka ttf-siji ttf-jetbrains-mono-nerd \
-    whitesur-icon-theme-git ttf-iosevka-custom ttf-iosevka-nerd ttf-unifont
+    whitesur-icon-theme-git ttf-iosevka-custom ttf-iosevka-nerd ttf-unifont proton-ge-custom-bin
 
 ## 4. Repository Setup
 if [ ! -d "nya" ]; then
