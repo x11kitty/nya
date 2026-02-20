@@ -73,8 +73,9 @@ sudo pacman -S --needed --noconfirm \
 ## 2. AUR Helper (Yay)
 if ! command -v yay &> /dev/null; then
     echo "📦 Installing yay..."
-    git clone https://aur.archlinux.org/yay.git
-    cd yay && makepkg -si --noconfirm && cd .. && rm -rf yay
+    git clone https://aur.archlinux.org/yay.git &&
+    cp yay ~/ && cd &&
+    cd yay && makepkg -si --noconfirm
 fi
 
 ## 3. AUR Packages & Fonts
