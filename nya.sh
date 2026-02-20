@@ -82,7 +82,7 @@ fi
 echo "🔡 Installing AUR packages and extra fonts..."
 yay -S --noconfirm wlogout nm-applet xwinwrap-git otf-ipafont \
     ttf-jetbrains-mono nerd-fonts-iosevka ttf-siji ttf-jetbrains-mono-nerd \
-    whitesur-icon-theme-git ttf-iosevka-custom ttf-iosevka-nerd ttf-unifont proton-ge-custom-bin
+    whitesur-icon-theme-git ttf-iosevka-custom ttf-iosevka-nerd ttf-unifont
 
 ## 4. Repository Setup
 if [ ! -d "nya" ]; then
@@ -91,7 +91,7 @@ fi
 cd nya
 
 echo "⚙️ Deploying configurations..."
-sudo cp config/* ~/.config/
+sudo cp -r config/* ~/.config/
 # Copying files with # in the name and renaming them to standard dotfiles
 cp "#.Xresources" "$HOME/.Xresources"
 # Copying files with # in the name and renaming them to standard dotfiles
@@ -102,12 +102,12 @@ sudo cp 1.jpg /usr
 
 ## 5. Permissions (Step 4)
 echo "🔐 Setting execution permissions..."
-chmod +x ~/.config/bspwm/bspwmrc
-chmod +x ~/.config/sxhkd/sxhkdrc
-chmod +x ~/.config/bspwm/Archy.sh
-chmod +x ~/.config/bspwm/Disp.sh
-chmod +x ~/.config/bspwm/walls.sh
-chmod +x ~/.config/bspwm/power.sh
+sudo chmod +x ~/.config/bspwm/bspwmrc
+sudo chmod +x ~/.config/sxhkd/sxhkdrc
+sudo chmod +x ~/.config/bspwm/Archy.sh
+sudo chmod +x ~/.config/bspwm/Disp.sh
+sudo chmod +x ~/.config/bspwm/walls.sh
+sudo chmod +x ~/.config/bspwm/power.sh
 
 ## 6. Audio Setup (Pipewire)
 echo "🔊 Switching to Pipewire..."
