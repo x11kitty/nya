@@ -5,6 +5,9 @@ set -e
 
 echo "🌌 Starting the Complete ArchyBspwm Installation..."
 
+#Multilib
+sudo sed -i '/\[multilib\]/,/Include/s/^#//' /etc/pacman.conf
+
 ## 0. LightDM Installation and Setup
 echo "🖥️ Installing and configuring LightDM..."
 sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter
