@@ -75,7 +75,7 @@ if ! command -v yay &> /dev/null; then
     echo "📦 Installing yay..."
     git clone https://aur.archlinux.org/yay.git &&
     cp yay ~/ && cd &&
-    cd yay && makepkg -si --noconfirm
+    cd yay && makepkg -si --noconfirm && cd
 fi
 
 ## 3. AUR Packages & Fonts
