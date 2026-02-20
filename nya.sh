@@ -83,7 +83,7 @@ fi
 
 ## 3. AUR Packages & Fonts
 echo "🔡 Installing AUR packages and extra fonts..."
-yay -S --noconfirm wlogout nm-applet xwinwrap-git otf-ipafont \
+sudo yay -S --noconfirm wlogout nm-applet xwinwrap-git otf-ipafont \
     ttf-jetbrains-mono nerd-fonts-iosevka ttf-siji ttf-jetbrains-mono-nerd \
     whitesur-icon-theme-git ttf-iosevka-custom ttf-iosevka-nerd ttf-unifont 
 
@@ -112,6 +112,7 @@ sudo chmod +x ~/.config/bspwm/Disp.sh
 sudo chmod +x ~/.config/bspwm/walls.sh
 sudo chmod +x ~/.config/bspwm/power.sh
 sudo chmod +x ~/.config/dolphinrc
+sudo chmod +x ~/.config/bspwm/Gaming.sh
 
 ## 6. Audio Setup (Pipewire)
 echo "🔊 Switching to Pipewire..."
