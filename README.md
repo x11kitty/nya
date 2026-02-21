@@ -11,11 +11,11 @@
 <details>
   <summary>📸 View Full Gallery</summary>
   <br>
-  <img src="images/rev.png".png" alt="App Launcher">
-  <img src="images/rof.png" alt="System Usage">
-  <img src="images/all.png" alt="Code Editor">
-  <img src="images/piv.png" alt="Code Editor">
-  <img src="images/wik.png" alt="Code Editor">
+  <img src="images/1.png".png" alt="App Launcher">
+  <img src="images/2.png" alt="System Usage">
+  <img src="images/3.png" alt="Code Editor">
+  <img src="images/4.png" alt="Code Editor">
+  <img src="images/5.png" alt="Code Editor">
 </details>
 
 <p align="center">
