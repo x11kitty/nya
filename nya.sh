@@ -38,7 +38,7 @@ xft-hintstyle = hintslight
 xft-rgba = rgb
 
 # Login Window Layout
-position = 50%,center 50%,center
+position = 10%,start 50%,center
 hide-user-image = false
 round-user-image = true
 
