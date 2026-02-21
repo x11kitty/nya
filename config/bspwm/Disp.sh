@@ -1,64 +1,83 @@
 #!/bin/bash
 
-# --- Retro Tokyo Color Palette ---
-PINK='\033[38;5;205m'
-PURPLE='\033[38;5;93m'
-CYAN='\033[38;5;51m'
-BG_DARK='\033[48;5;234m'
+# --- The G.O.A.T. Dracula Palette ---
+BG='\033[48;5;235m'
+FG='\033[38;5;231m'
+PURPLE='\033[38;5;141m'
+CYAN='\033[38;5;117m'
+PINK='\033[38;5;212m'
+GREEN='\033[38;5;84m'
+ORANGE='\033[38;5;215m'
+RED='\033[38;5;203m'
 RESET='\033[0m'
 BOLD='\033[1m'
 
-# [cite_start]Get the default display name [cite: 1]
+# Get the default display name
 DISPLAY_NAME=$(xrandr | grep " connected" | cut -d' ' -f1 | head -n 1)
 
 clear
-echo -e "${PURPLE}==========================================${RESET}"
-echo -e "${PINK}${BOLD}    DISPLAY SETTINGS      ${RESET}"
-echo -e "${CYAN}   Active Display: $DISPLAY_NAME${RESET}"
-echo -e "${PURPLE}==========================================${RESET}"
-echo -e "${CYAN}1)${RESET} Set Resolution & Refresh Rate"
-echo -e "${CYAN}2)${RESET} Stretch Screen (Full Scaling)"
-echo -e "${CYAN}3)${RESET} Apply Scaling (e.g., 1.5x1.5)"
-echo -e "${CYAN}4)${RESET} Intel-Style Scale-From"
-echo -e "${CYAN}5)${RESET} Exit"
-echo -e "${PURPLE}==========================================${RESET}"
-echo -ne "${PINK}Select an option [1-5]: ${RESET}"
+echo -e "${PURPLE}      ___           ___           ___           ___     ${RESET}"
+echo -e "${PURPLE}     /  /\         /  /\         /  /\         /  /\    ${RESET}"
+echo -e "${CYAN}    /  /::\       /  /::\       /  /:/_       /  /::\   ${RESET}"
+echo -e "${CYAN}   /  /:/\:\     /  /:/\:\     /  /:/ /\     /  /:/\:\  ${RESET}"
+echo -e "${PINK}  /  /:/  \:\   /  /:/  \:\   /  /:/ /:/_   /  /:/~/:/  ${RESET}"
+echo -e "${PINK} /__/:/ \__\:\ /__/:/ \__\:\ /__/:/ /:/ /\ /__/:/ /:/   ${RESET}"
+echo -e "${ORANGE} \  \:\ /  /:/ \  \:\ /  /:/ \  \:\/:/ /:/ \  \:\/:/    ${RESET}"
+echo -e "${ORANGE}  \  \:\  /:/   \  \:\  /:/   \  \::/ /:/   \  \::/     ${RESET}"
+echo -e "${RED}   \  \:\/:/     \  \:\/:/     \  \:\/:/     \  \:\     ${RESET}"
+echo -e "${RED}    \  \::/       \  \::/       \  \::/       \  \:\    ${RESET}"
+echo -e "${RED}     \__\/         \__\/         \__\/         \__\/    ${RESET}"
+echo ""
+echo -e "  ${BOLD}${FG}SYSTEM INTERFACE${RESET} ${PURPLE}>>${RESET} ${CYAN}${BOLD}XRANDR_ENGINE${RESET}"
+echo -e "  ${BOLD}${FG}ACTIVE_TARGET${RESET}    ${PURPLE}>>${RESET} ${PINK}${BOLD}$DISPLAY_NAME${RESET}"
+echo -e "${PURPLE}  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${RESET}"
+echo ""
+echo -e "  ${BOLD}${CYAN}01${RESET} ${FG}󰑭 SET RESOLUTION & HZ${RESET}"
+echo -e "  ${BOLD}${CYAN}02${RESET} ${FG}󰊓 STRETCH (FULL SCALE)${RESET}"
+echo -e "  ${BOLD}${CYAN}03${RESET} ${FG}󰆾 CUSTOM SCALE FACTOR${RESET}"
+echo -e "  ${BOLD}${CYAN}04${RESET} ${FG}󱎔 INTEL SCALE-FROM${RESET}"
+echo -e "  ${BOLD}${RED}05${RESET} ${FG}󰈆 TERMINATE SCRIPT${RESET}"
+echo ""
+echo -e "${PURPLE}  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${RESET}"
+echo -ne "  ${BOLD}${PINK}λ${RESET} ${FG}Execute command: ${RESET}"
 read CHOICE
 
 case $CHOICE in
     1)
-        echo -ne "${CYAN}Enter Resolution (e.g., 1920x1080): ${RESET}"
+        echo -ne "\n  ${CYAN}󰑭 Mode (e.g. 1920x1080): ${RESET}"
         read RES
-        echo -ne "${CYAN}Enter Refresh Rate (e.g., 60): ${RESET}"
+        echo -ne "  ${CYAN}󱥸 Rate (e.g. 144): ${RESET}"
         read RATE
-        # [cite_start]Sets resolution and rate [cite: 1]
+        # Sets resolution and rate
         xrandr --output "$DISPLAY_NAME" --mode "$RES" --rate "$RATE"
         ;;
     2)
-        # [cite_start]Sets scaling mode to Full [cite: 1]
+        # Sets scaling mode to Full
         xrandr --output "$DISPLAY_NAME" --set "scaling mode" "Full"
-        echo -e "${PINK}Scaling mode set to Full.${RESET}"
+        echo -e "\n  ${GREEN}󰄬 Buffer updated to Full Stretch.${RESET}"
         ;;
     3)
-        echo -ne "${CYAN}Enter Scale Factor (e.g., 1.5x1.5): ${RESET}"
+        echo -ne "\n  ${CYAN}󰆾 Factor (e.g. 1.25x1.25): ${RESET}"
         read SCALE
-        # [cite_start]Applies specific scale factor [cite: 1]
+        # Applies specific scale factor
         xrandr --output "$DISPLAY_NAME" --scale "$SCALE"
         ;;
     4)
-        echo -ne "${CYAN}Enter Mode (e.g., 1024x768): ${RESET}"
+        echo -ne "\n  ${CYAN}󰊓 Base Mode (e.g. 1280x960): ${RESET}"
         read MODE
-        # [cite_start]Mimics intelgfxcmdcenter behavior [cite: 1]
+        # Mimics intelgfxcmdcenter behavior
         xrandr --output "$DISPLAY_NAME" --mode "$MODE" --scale-from "$MODE"
         ;;
     5)
+        echo -e "  ${RED}Shutting down...${RESET}"
         exit 0
         ;;
     *)
-        echo -e "${PINK}Invalid option.${RESET}"
+        echo -e "\n  ${RED}󰀦 FATAL: Selection out of bounds.${RESET}"
         ;;
 esac
 
-echo -e "\n${PURPLE}Apply complete.${RESET}"
-[cite_start]echo -e "${CYAN}Copy your command to ${BOLD}~/.config/bspwm/bspwmrc${RESET}${CYAN} for persistence. [cite: 1]${RESET}"
-sleep 2
+echo -e "\n  ${GREEN}${BOLD}CORE SYNC COMPLETE.${RESET}"
+# Persistence hint
+echo -e "  ${COMMENT}Add to bspwmrc for persistence.${RESET}"
+sleep 1.5
