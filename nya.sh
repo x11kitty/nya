@@ -102,6 +102,8 @@ cp "#.bashrc" "$HOME/.bashrc"
 
 # Wallpaper for lightdm
 sudo cp 1.jpg /usr
+# PfP picture
+sudo cp 1.png /usr
 
 ## 5. Permissions (Step 4)
 echo "🔐 Setting execution permissions..."
