@@ -12,7 +12,7 @@
   <summary>📸 View Full Gallery</summary>
   <br>
   <img src="images/11.png".png" alt="App Launcher">
-  <img src="images/2.png" alt="System Usage">
+  <img src="images/22.png" alt="System Usage">
   <img src="images/3.png" alt="Code Editor">
   <img src="images/4.png" alt="Code Editor">
   <img src="images/5.png" alt="Code Editor">
