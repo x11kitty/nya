@@ -1,16 +1,16 @@
 [color]
-# True Black background
-background = '#000000'
+# Catppuccin Mocha Base (kept for contrast)
+background = '#1e1e2e'
 
 gradient = 1
 gradient_count = 8
 
-# Manually "alpha-blended" colors (50% mix with black)
-gradient_color_1 = '#002620'  # Blended Deep Teal
-gradient_color_2 = '#00342E'  # Blended Slate Green
-gradient_color_3 = '#173E19'  # Blended Forest Green
-gradient_color_4 = '#215023'  # Blended Green
-gradient_color_5 = '#005660'  # Blended Dark Cyan
-gradient_color_6 = '#13636D'  # Blended Turquoise
-gradient_color_7 = '#40713F'  # Blended Light Mint
-gradient_color_8 = '#597D5A'  # Blended Seafoam
+# Enhanced Saturation Accents
+gradient_color_1 = '#1e66f5'  # Deep Saturated Blue
+gradient_color_2 = '#209fb5'  # Vibrant Sapphire/Teal
+gradient_color_3 = '#04a5e5'  # High-Contrast Sky
+gradient_color_4 = '#179287'  # Saturated Teal
+gradient_color_5 = '#40a02b'  # Vivid Green
+gradient_color_6 = '#df8e1d'  # Saturated Yellow/Amber
+gradient_color_7 = '#fe640b'  # Bright Peach/Orange
+gradient_color_8 = '#d20f39'  # Intense Red
