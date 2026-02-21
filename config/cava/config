@@ -1,16 +1,16 @@
 [color]
-# Catppuccin Mocha Base (kept for contrast)
-background = '#1e1e2e'
+# Catppuccin Mocha Base (OLED Pitch Black)
+background = '#000000'
 
 gradient = 1
 gradient_count = 8
 
-# Enhanced Saturation Accents
-gradient_color_1 = '#1e66f5'  # Deep Saturated Blue
-gradient_color_2 = '#209fb5'  # Vibrant Sapphire/Teal
-gradient_color_3 = '#04a5e5'  # High-Contrast Sky
-gradient_color_4 = '#179287'  # Saturated Teal
-gradient_color_5 = '#40a02b'  # Vivid Green
-gradient_color_6 = '#df8e1d'  # Saturated Yellow/Amber
-gradient_color_7 = '#fe640b'  # Bright Peach/Orange
-gradient_color_8 = '#d20f39'  # Intense Red
+# Dracula-Inspired High-Saturation Palette
+gradient_color_1 = '#bd93f9'  # Dracula Purple (The Classic)
+gradient_color_2 = '#ff79c6'  # Dracula Pink
+gradient_color_3 = '#8be9fd'  # Dracula Cyan
+gradient_color_4 = '#50fa7b'  # Dracula Green
+gradient_color_5 = '#f1fa8c'  # Dracula Yellow
+gradient_color_6 = '#ffb86c'  # Dracula Orange
+gradient_color_7 = '#ff5555'  # Dracula Red
+gradient_color_8 = '#d20f39'  # Kept your Intense Red for the finish
