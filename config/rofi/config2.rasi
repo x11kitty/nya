@@ -39,7 +39,7 @@ configuration {
     drac-yel:    #f1fa8c;
 
     /* Applied Colors */
-    bg:                  #282a36e6; /* Base with transparency */
+    bg:                  #202a36e6; /* Base with transparency */
     fg:                  @drac-fg;
     accent:              @drac-pur;
     button:              @drac-cur;
@@ -54,13 +54,13 @@ window {
     width:               400px;
     border-radius:       10px;
     background-color:    @bg;
-    border:              1px;
+    border:              2px;
     border-color:        @drac-pur;
 }
 
 mainbox {
     children:            [ inputbar, listview, mode-switcher ];
-    padding:             12px;
+    padding:             6px;
 }
 
 /* Search Bar */
@@ -68,7 +68,7 @@ inputbar {
     children:            [ prompt, entry ];
     background-color:    @button;
     border-radius:       8px;
-    padding:             8px 12px;
+    padding:             5px 7px;
     margin:              0 0 10px 0;
 }
 
@@ -88,12 +88,12 @@ listview {
     lines:               6;
     columns:             1;
     fixed-height:        false;
-    spacing:             4px;
+    spacing:             1px;
     scrollbar:           false;
 }
 
 element {
-    padding:             6px 10px;
+    padding:             1px 1px;
     border-radius:       6px;
     cursor:              pointer;
 }
@@ -109,7 +109,7 @@ element selected.normal {
 }
 
 element-icon {
-    size:                24px;
+    size:                29px;
     margin:              0 10px 0 0;
 }
 
@@ -120,12 +120,12 @@ element-text {
 
 /* Mode Switcher Buttons */
 mode-switcher {
-    spacing:             10px;
-    margin:              10px 0 0 0;
+    spacing:             7px;
+    margin:              1px 0 0 0;
 }
 
 button {
-    padding:             6px;
+    padding:             5px;
     background-color:    @button;
     text-color:          @drac-cmt;
     vertical-align:      0.5;
