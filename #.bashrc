@@ -64,8 +64,10 @@ set_prompt() {
     local p1='\[\033[38;5;141m\]' # Purple
     local p2='\[\033[38;5;105m\]' # Soft Purple
     local p3='\[\033[38;5;117m\]' # Cyan
-
-    PS1+="\n${p1}❯${p2}❯${p3}❯${p1}❯${p2}❯${p3}❯${RESET} "
+    local p4='\[\033[38;5;123m\]' # Bright Cyan / Sky Blue
+    local p5='\[\033[38;5;159m\]' # Pale Mint / Ice Blue
+    local p6='\[\033[38;5;213m\]' # Soft Pink / Lavender
+    PS1+="${p1}❯${p2}❯${p3}❯${p4}❯${p5}❯${p6}❯${RESET} "
 }
 
 PROMPT_COMMAND=set_prompt
