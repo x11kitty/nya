@@ -18,9 +18,9 @@ sudo systemctl enable lightdm
 #Perfect-Grub-system 
 sudo tee /etc/default/grub > /dev/null <<EOF
 # GRUB Core Settings
-GRUB_DEFAULT=saved
-GRUB_SAVEDEFAULT=true
-GRUB_TIMEOUT=5
+GRUB_DEFAULT="saved"
+GRUB_SAVEDEFAULT="true"
+GRUB_TIMEOUT="5"
 GRUB_DISTRIBUTOR="Arch"
 
 # Professional Silent Boot
@@ -30,7 +30,7 @@ GRUB_CMDLINE_LINUX=""
 
 # Graphical Settings
 GRUB_TERMINAL_OUTPUT="gfxterm"
-GRUB_GFXMODE="1920x1080,auto" # Set this to your monitor's native res
+GRUB_GFXMODE="1920x1080,auto # Set this to your monitors native res"
 GRUB_GFXPAYLOAD_LINUX="keep"
 
 # Theme & Visuals
@@ -40,10 +40,14 @@ GRUB_THEME="/boot/grub/themes/arch-silence/theme.txt"
 # Modern Functionality
 GRUB_DISABLE_RECOVERY="true"
 GRUB_DISABLE_SUBMENU="y"
-GRUB_DISABLE_OS_PROBER="false" # Set to false if you dual-boot Windows
+GRUB_DISABLE_OS_PROBER="false # Set to false if you dual-boot Windows"
 
 # Preloads
 GRUB_PRELOAD_MODULES="part_gpt part_msdos"
+
+GRUB_BACKGROUND="/usr/background.jpg"
+export GRUB_COLOR_NORMAL="light-gray/black"
+export GRUB_COLOR_HIGHLIGHT="light-green/black"
 EOF
 
 # Configure the background image in the greeter config
