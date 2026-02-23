@@ -65,7 +65,7 @@ Explore the interface and workflow.
 
 ```bash
 # Clone the repository
-git clone [https://github.com/x11kitty/nya.git](https://github.com/x11kitty/nya.git)
+git clone https://github.com/x11kitty/nya.git
 
 # Navigate into the directory
 cd nya
@@ -73,3 +73,16 @@ cd nya
 # Give execution permissions and run the installer
 chmod +x nya.sh
 ./nya.sh
+```
+
+### ⌨️ Keybindings
+
+| Shortcut | Action |
+| :--- | :--- |
+| `Super + T` | Open Terminal |
+| `Super + Q` | Close Windows |
+| `Super + Shift + X` | Focus window in direction |
+| `Super + R` | App Launcher (Rofi) |
+| `Super + D` | App Launcher (Dmenu) |
+
+---
