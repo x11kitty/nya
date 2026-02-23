@@ -6,12 +6,18 @@ ViewPropsTimestamp=2026,2,20,18,28,39.177
 [Icons]
 Theme=Papirus-Dark
 
+[IconsMode]
+IconSize=48
+
 [KFileDialog Settings]
 Places Icons Auto-resize=false
 Places Icons Static Size=22
 
 [MainWindow]
 MenuBar=Disabled
+
+[PreviewSettings]
+Plugins=directorythumbnail,imagethumbnail,ebookthumbnail,exrthumbnail,svgthumbnail,kraorathumbnail,cursorthumbnail,windowsimagethumbnail,djvuthumbnail,appimagethumbnail,audiothumbnail,comicbookthumbnail,windowsexethumbnail,opendocumentthumbnail,jpegthumbnail,glycin-jxl,glycin-image-rs,glycin-svg,glycin-heif
 
 [UiSettings]
 ColorScheme=KritaDarker
