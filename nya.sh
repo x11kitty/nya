@@ -123,7 +123,7 @@ systemctl --user enable --now pipewire pipewire-pulse wireplumber
 
 ## 7. Gaming & Kernel (Zen)
 echo "🎮 Installing Gaming Tools & Zen Kernel..."
-sudo pacman -S --noconfirm linux-zen linux-zen-headers steam gamemode mangohud wine-staging gamescope
+sudo pacman -S --noconfirm linux-zen linux-zen-headers steam gamemode mangohud wine-staging gamescope yt-dlp
 
 # Polybar Dependencies
 sudo pacman -S --needed --noconfirm base-devel git cmake cairo libxcb xcb-proto xcb-util-image xcb-util-wm xcb-util-xrm python-sphinx
