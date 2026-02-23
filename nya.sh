@@ -47,7 +47,7 @@ GRUB_PRELOAD_MODULES="part_gpt part_msdos"
 
 GRUB_BACKGROUND="/usr/background.jpg"
 export GRUB_COLOR_NORMAL="light-gray/black"
-export GRUB_COLOR_HIGHLIGHT="light-green/black"
+export GRUB_COLOR_HIGHLIGHT="light-green/dark-gray"
 EOF
 
 # Configure the background image in the greeter config
