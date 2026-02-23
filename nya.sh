@@ -15,6 +15,37 @@ sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter
 # Enable the LightDM service to start on boot
 sudo systemctl enable lightdm
 
+#Perfect-Grub-system 
+sudo tee /etc/default/grub > /dev/null <<EOF
+# GRUB Core Settings
+GRUB_DEFAULT=saved
+GRUB_SAVEDEFAULT=true
+GRUB_TIMEOUT=5
+GRUB_DISTRIBUTOR="Arch"
+
+# Professional Silent Boot
+# 'udev.log_level=3' and 'vt.global_cursor_default=0' keep the screen black and clean
+GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet splash vt.global_cursor_default=0"
+GRUB_CMDLINE_LINUX=""
+
+# Graphical Settings
+GRUB_TERMINAL_OUTPUT="gfxterm"
+GRUB_GFXMODE="1920x1080,auto" # Set this to your monitor's native res
+GRUB_GFXPAYLOAD_LINUX="keep"
+
+# Theme & Visuals
+# I recommend installing the 'distro-grub-themes' or 'shv-grub-theme' from AUR
+GRUB_THEME="/boot/grub/themes/arch-silence/theme.txt"
+
+# Modern Functionality
+GRUB_DISABLE_RECOVERY="true"
+GRUB_DISABLE_SUBMENU="y"
+GRUB_DISABLE_OS_PROBER="false" # Set to false if you dual-boot Windows
+
+# Preloads
+GRUB_PRELOAD_MODULES="part_gpt part_msdos"
+EOF
+
 # Configure the background image in the greeter config
 # This targets line 60 specifically as requested
 sudo tee /etc/lightdm/lightdm-gtk-greeter.conf > /dev/null <<EOF
