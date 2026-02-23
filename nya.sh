@@ -139,6 +139,8 @@ cp "#.bashrc" "$HOME/.bashrc"
 sudo cp 1.jpg /usr
 # PfP picture
 sudo cp 1.png /usr
+# Grub Background
+sudo cp background.jpg /usr
 
 ## 5. Permissions (Step 4)
 echo "🔐 Setting execution permissions..."
