@@ -29,6 +29,12 @@ super + n
 # WINDOW MANAGEMENT
 # ========================
 
+# Toggle Hide/Minimize (Hide focused or Unhide last)
+super + v
+    if [ -n "$(bspc query -N -n .hidden.local.window)" ]; \
+    then bspc node any.hidden.local.window -g hidden=off; \
+    else bspc node -g hidden=on; fi
+
 # Toggle Float and Center
 super + space
     bspc node -t ~floating && bspc node -z center
