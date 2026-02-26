@@ -1,4 +1,10 @@
 # 🎀 Nya
+
+<div align="center">
+  <img src="images/kono.png" width="400" style="border-radius: 15px;" alt="Random Anime Character"/>
+  <p><i>"Hello ✨"</i></p>
+</div>
+
 <p align="center">
   <b>A sophisticated, high-performance Arch Linux environment.</b>
   <br>
@@ -71,10 +77,6 @@ cd nya
 chmod +x nya.sh
 ./nya.sh
 ```
-<div align="center">
-  <img src="images/wifu.png" width="400" style="border-radius: 15px;" alt="Random Anime Character"/>
-  <p><i>"Stay Healthy. Code More. ✨"</i></p>
-</div>
 
 ### ⌨️ Keybindings
 
