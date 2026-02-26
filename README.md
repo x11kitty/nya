@@ -1,7 +1,5 @@
-# 🎀 nya.dotfiles
+# 🎀 Nya
 <p align="center">
-  <img src="images/2.gif" alt="Banner" width="100%">
-  <br>
   <b>A sophisticated, high-performance Arch Linux environment.</b>
   <br>
   <i>Minimalism meets productivity through bspwm and i3-gaps.</i>
