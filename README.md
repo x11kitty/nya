@@ -1,7 +1,7 @@
 # 🎀 nya.dotfiles
 
 <p align="center">
-  <img src="images/2.png" alt="Banner" width="100%">
+  <img src="images/2.gif" alt="Banner" width="100%">
   <br>
   <b>A sophisticated, high-performance Arch Linux environment.</b>
   <br>
