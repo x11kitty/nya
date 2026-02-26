@@ -74,8 +74,8 @@ chmod +x nya.sh
 ./nya.sh
 ```
 <div align="center">
-  <img src="images/wifu.png" width="400" style="border-radius: 15px;" alt="Random Anime Character" />
-  <p><i>"Code less. Automate more. ✨"</i></p>
+  <img src="images/wifu.png" width="400" style="border-radius: 15px;" alt="Random Anime Character"/>
+  <p><i>"Stay Healthy. Code More. ✨"</i></p>
 </div>
 
 ### ⌨️ Keybindings
