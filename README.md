@@ -32,6 +32,9 @@ Explore the interface and workflow.
     <img src="images/4.png" alt="Terminal" width="48%">
   </p>
 </details>
+<p align="center">
+  <video src="images/demo.mp4" width="100%" autoplay loop muted playsinline></video>
+</p>
 
 ---
 
