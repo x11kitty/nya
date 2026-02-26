@@ -1,7 +1,7 @@
 # 🎀 Nya
 
 <div align="center">
-  <img src="images/kono.png" width="400" style="border-radius: 15px;" alt="Random Anime Character"/>
+  <img src="images/kono.png" width="270" style="border-radius: 0px;" alt="Random Anime Character"/>
   <p><i>"Hello ✨"</i></p>
 </div>
 
