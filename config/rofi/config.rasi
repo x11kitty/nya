@@ -84,7 +84,7 @@ entry {
 /* Results List */
 listview {
     lines:               6;
-    columns:             1;
+    columns:             2;
     fixed-height:        false;
     spacing:             1px;
     scrollbar:           false;
@@ -136,3 +136,4 @@ button selected {
     background-color:    @accent;
     text-color:          @drac-bg;
 }
+
