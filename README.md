@@ -21,10 +21,6 @@
 
 Explore the interface and workflow.
 
-<p align="center">
-  <video src="images/demo.mp4" width="100%" autoplay loop muted playsinline></video>
-</p>
-
 <details>
   <summary>✨ Click to view screenshots</summary>
   <br>
