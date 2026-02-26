@@ -48,7 +48,7 @@ Explore the interface and workflow.
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Info
 
 | Component | Choice |
 | :--- | :--- |
