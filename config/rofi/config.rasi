@@ -104,6 +104,8 @@ element normal.normal {
 element selected.normal {
     background-color:    @drac-cur;
     text-color:          @drac-pnk; /* Highlight text with Pink */
+    border:           0px 0px 0px 4px; /* Adds a small accent line on the left */
+    border-color:     @drac-pur;
 }
 
 element-icon {
