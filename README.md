@@ -16,6 +16,7 @@
   <a href="https://github.com/baskerville/bspwm"><img src="https://img.shields.io/badge/WM-bspwm-000000?style=for-the-badge&logo=linux&logoColor=white" alt="bspwm"></a>
   <a href="https://github.com/i3/i3"><img src="https://img.shields.io/badge/WM-i3wm-E84D31?style=for-the-badge&logo=i3&logoColor=white" alt="i3wm"></a>
   <a href="https://www.gnu.org/software/bash/"><img src="https://img.shields.io/badge/Shell-Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Bash"></a>
+  <img src="https://img.shields.io/badge/STATUS-OPTIMIZED-a6e3a1?style=for-the-badge&logo=checkmarx&logoColor=#59bb2h">
 </p>
 
 ---
