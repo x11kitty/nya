@@ -2,7 +2,7 @@
 
 <div align="center">
   <img src="images/kono.png" width="270" style="border-radius: 0px;" alt="Random Anime Character"/>
-  <p><i>"Hello ✨"</i></p>
+  <p><i>"Welcome ✨"</i></p>
 </div>
 
 <p align="center">
