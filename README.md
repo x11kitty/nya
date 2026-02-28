@@ -65,7 +65,7 @@ Explore the interface and workflow.
 ## 🚀 Installation
 
 > [!IMPORTANT]
-> This installation script is designed for Arch Linux. It is recommended to review the `nya.sh` script before execution to ensure compatibility with your hardware.
+> This installation script is designed for Arch Linux. It is recommended to review the `nya.sh` script before execution to ensure compatibility with your hardware. If You want to use Bluetooth You can Use This Command bash : sudo systemctl enable --now bluetooth && Blueman app for connection 
 
 ```bash
 # Clone the repository
