@@ -30,9 +30,9 @@ Explore the interface and workflow.
   <br>
   <p align="center">
     <img src="images/11.png" alt="App Launcher" width="48%">
-    <img src="images/22.png" alt="System Usage" width="48%">
+    <img src="images/56.png" alt="System Usage" width="48%">
     <br>
-    <img src="images/56.png" alt="Editor" width="48%">
+    <img src="images/3.png" alt="Editor" width="48%">
     <img src="images/4.png" alt="Terminal" width="48%">
   </p>
 </details>
